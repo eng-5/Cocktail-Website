@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Drink - Cocktail Menu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eab308",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#050505",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Noto Serif', serif;
+        }
+        .textured-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(249, 164, 6, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen textured-bg">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between border-b border-primary/20 px-6 py-4 lg:px-20">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-100 text-3xl font-display font-bold leading-tight tracking-tight uppercase italic"><a href="index.html" class="text-inherit">Drink</a></h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-10 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-slate-100 hover:text-primary transition-colors text-sm font-medium uppercase tracking-widest" href="menu.html">Menu</a>
+<a class="text-slate-100/70 hover:text-primary transition-colors text-sm font-medium uppercase tracking-widest" href="events.html">Reservations</a>
+<a class="text-slate-100/70 hover:text-primary transition-colors text-sm font-medium uppercase tracking-widest" href="#">Our Story</a>
+<a class="text-slate-100/70 hover:text-primary transition-colors text-sm font-medium uppercase tracking-widest" href="#">Contact</a>
+</nav>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-6 py-2 rounded-lg text-sm font-bold uppercase tracking-wider transition-all">
+                        Book a Table
+                    </button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-slate-100 text-4xl">menu</span>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center">
+<!-- Hero Section -->
+<div class="w-full max-w-6xl px-4 py-16 md:py-24 reveal-on-scroll">
+<div class="relative overflow-hidden rounded-xl bg-zinc-950 shadow-2xl">
+<div class="absolute inset-0 opacity-40 mix-blend-overlay bg-center bg-cover" data-alt="Moody dark bar background with crystal glassware" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1mu5MxlgH50WpgHTbcCodXSo_GndQj9tt_86gSUz8ACX53gYbNjCXMSwY_8Yre1-wRZLEr8QOcmbLJk5Ia9KciKKbqOWGBPzet0hKllWJmEq6EZlG0Hw8KyQg4XEdYeiGlrlw7tPqlJglgetPoTYMqakcXRuPgtljFBXoJ4nq0RG8-wbzk24PCBzFwqzMe5BmMN-hfoHiBlNl9MhH19jSMZXMJIb7OKlqZTU2LMyzdkVqitbU-sKuoRzTcIxRy9MWZEkRDeWf8I4B");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/60 to-transparent"></div>
+<div class="relative z-10 flex flex-col items-center justify-center py-24 px-6 text-center">
+<span class="text-primary text-sm font-bold uppercase tracking-[0.3em] mb-4">The Art of the Pour</span>
+<h1 class="text-slate-100 text-6xl md:text-8xl font-display font-bold mb-6 italic">The Cocktail Collection</h1>
+<p class="text-slate-300 max-w-2xl text-lg font-light leading-relaxed">
+                                A curated selection of timeless classics, avant-garde house creations, and refined non-alcoholic spirits crafted for the discerning palate.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Menu Tabs -->
+<div class="w-full max-w-4xl px-4">
+<div class="flex justify-center border-b border-primary/20 mb-16">
+<a class="px-8 pb-4 text-slate-400 hover:text-primary border-b-2 border-transparent transition-all font-medium uppercase tracking-widest text-sm" href="#classics">Classics</a>
+<a class="px-8 pb-4 text-primary border-b-2 border-primary transition-all font-bold uppercase tracking-widest text-sm" href="#house">House Originals</a>
+<a class="px-8 pb-4 text-slate-400 hover:text-primary border-b-2 border-transparent transition-all font-medium uppercase tracking-widest text-sm" href="#non-alcoholic">Non-Alcoholic</a>
+</div>
+<!-- Category: House Originals -->
+<section class="mb-28" id="house">
+<div class="flex items-center gap-6 mb-16">
+<div class="h-[1px] flex-1 bg-gradient-to-r from-transparent to-primary/30"></div>
+<h2 class="text-primary text-4xl font-display italic">House Originals</h2>
+<div class="h-[1px] flex-1 bg-gradient-to-l from-transparent to-primary/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+<!-- Item 1 -->
+<div class="flex gap-6 group p-5 -mx-5 hover:bg-white/5 rounded-2xl transition-all duration-300 border border-transparent hover:border-white/10 reveal-on-scroll">
+<div class="w-24 h-32 flex-shrink-0 overflow-hidden rounded-lg border border-primary/10 group-hover:border-primary/40 transition-colors">
+<div class="w-full h-full bg-center bg-cover" data-alt="Dark purple cocktail with a gold garnish" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBm9cIsGTdcnpBh6KodFzs6aQ3RydEYUQigL2F4dQfsgy1vUP_dEJ5iYI0WTV-D_dSL9CftFRyxQjjFe7yi3KjRjrZ3qqLyB4YOdiKUB-r0qRFrEUR4Oyvb1JV2cQdON0a18arOSKm0A35yxvJcyKBtQa5g6TrQuLv-uUT6YWeTcv6wV2mBlBywhvKozGdLNqCG1EkOyErU2rUGntJvEYU5HDpB3ZZmKaGHo6ouz6x6z6V5-QI3q4nLMqTiEvkhYDrWYdZGhQR-lm02");'></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline border-b border-dashed border-primary/20 pb-1 mb-2">
+<h3 class="text-slate-100 text-xl font-display font-bold">Midnight Silk</h3>
+<span class="text-primary font-bold">$22</span>
+</div>
+<p class="text-slate-300 text-base italic mb-2 leading-relaxed">
+                                        Smoky Mezcal, Blackberry Reduction, Fresh Sage, Gold Dust Finish.
+                                    </p>
+<p class="text-slate-500 text-xs uppercase tracking-tighter">Velvety &amp; Earthy</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-6 group p-5 -mx-5 hover:bg-white/5 rounded-2xl transition-all duration-300 border border-transparent hover:border-white/10 reveal-on-scroll">
+<div class="w-24 h-32 flex-shrink-0 overflow-hidden rounded-lg border border-primary/10 group-hover:border-primary/40 transition-colors">
+<div class="w-full h-full bg-center bg-cover" data-alt="Golden amber cocktail in a coupe glass" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3-WWyHlLkMIBmnSfNKWbt7haE976aIac1gkJJnj48C9RukJhiroc6acxms8UZNbNzLKOQd97yNPIHPhspruuOxPTV141HhY2E-WI3xEpYjUlOBksS-HEUnGJ7UfWp90y-pELE1bBuzx5lWrlA2LLAtROobcbm9evs_DOhz9woDewGnBKp0Y4loTrgHcInJAPKex7K1IZ955osJA-w_CIcvlqbAkMe7Y-xR2zlirxGOAQxVGeFMh7e6gYslUu7kgnQKdtr0-aLWP_V");'></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline border-b border-dashed border-primary/20 pb-1 mb-2">
+<h3 class="text-slate-100 text-xl font-display font-bold">Golden Hour</h3>
+<span class="text-primary font-bold">$20</span>
+</div>
+<p class="text-slate-300 text-base italic mb-2 leading-relaxed">
+                                        12-Year Aged Rum, Infused Saffron, Wildflower Honey, Meyer Lemon.
+                                    </p>
+<p class="text-slate-500 text-xs uppercase tracking-tighter">Bright &amp; Complex</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex gap-6 group p-5 -mx-5 hover:bg-white/5 rounded-2xl transition-all duration-300 border border-transparent hover:border-white/10 reveal-on-scroll">
+<div class="w-24 h-32 flex-shrink-0 overflow-hidden rounded-lg border border-primary/10 group-hover:border-primary/40 transition-colors">
+<div class="w-full h-full bg-center bg-cover" data-alt="Green botanical gin drink with cucumber" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjcOpEeoHjR_6RhyN72PgtVIl5ZT9WtOdWU6oE-LFRJ4WbvxQtglBQYWi4Uwje8R3Ytyra_9w9_unGRVdajSTpz99FIfgJaz6m0_rFOylKa5Jm3Hx2Lz4PQEzRi9aRWY_jSMkxMsJQ4C86nU1iVQo3sgzk4VH6rLGzv-DL45dwWkEpBq40X095lKICDNlwzQtuTtWSsM9K7Ba6-3BZ3kWZibD43Q2oiv5X_tXxQJHcMtmwUiQeRwUdDvrYOik4ZOp3jqmXpbtcLVZc");'></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline border-b border-dashed border-primary/20 pb-1 mb-2">
+<h3 class="text-slate-100 text-xl font-display font-bold">The Alchemist</h3>
+<span class="text-primary font-bold">$24</span>
+</div>
+<p class="text-slate-300 text-base italic mb-2 leading-relaxed">
+                                        Botanical Gin, Elderflower Liqueur, Muddled Cucumber, Absinthe Rinse.
+                                    </p>
+<p class="text-slate-500 text-xs uppercase tracking-tighter">Crisp &amp; Potent</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex gap-6 group p-5 -mx-5 hover:bg-white/5 rounded-2xl transition-all duration-300 border border-transparent hover:border-white/10 reveal-on-scroll">
+<div class="w-24 h-32 flex-shrink-0 overflow-hidden rounded-lg border border-primary/10 group-hover:border-primary/40 transition-colors">
+<div class="w-full h-full bg-center bg-cover" data-alt="Modern red cocktail with clear ice" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYEPT0vONemZAQrKKbI7kLuBbWQgVLNM698U7W2Rr5oe9cH2vmZV_o9EP2sYcJkjYASYN7dJoOH9khGj5o-ylyCee36o_6pvqX9vuOO-QxrsQ-A498wIMJv8w91z3khF54i-_fpIjO7trjNkms00licp4mUESdggTr05Kt3tcAlPG7OPEmcb_FmtPOH092HVAuC9dWSv-fxt2eAZnJrnoK6q2Tg_CLc2Khbwxr7qMbCogOiiLcnB_Q2f_pMBBzoQJ8GXyx9pWwGHgs");'></div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-baseline border-b border-dashed border-primary/20 pb-1 mb-2">
+<h3 class="text-slate-100 text-xl font-display font-bold">Velvet Noir</h3>
+<span class="text-primary font-bold">$21</span>
+</div>
+<p class="text-slate-300 text-base italic mb-2 leading-relaxed">
+                                        Bourbon, House Cherry Bitters, Luxardo Syrup, Smoked Oak.
+                                    </p>
+<p class="text-slate-500 text-xs uppercase tracking-tighter">Rich &amp; Robust</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Classics -->
+<section class="mb-28" id="classics">
+<div class="flex items-center gap-6 mb-16">
+<div class="h-[1px] flex-1 bg-gradient-to-r from-transparent to-primary/30"></div>
+<h2 class="text-primary text-4xl font-display italic">The Timeless Classics</h2>
+<div class="h-[1px] flex-1 bg-gradient-to-l from-transparent to-primary/30"></div>
+</div>
+<div class="space-y-8 max-w-2xl mx-auto">
+<div class="flex justify-between items-center group cursor-default p-5 -mx-5 hover:bg-white/5 rounded-2xl transition-all duration-300 border border-transparent hover:border-white/10 reveal-on-scroll">
+<div>
+<h3 class="text-slate-100 text-lg font-bold group-hover:text-primary transition-colors">Vesper Martini</h3>
+<p class="text-slate-300 text-base italic leading-relaxed">Gin, Vodka, Lillet Blanc, Lemon Twist. Shaken, not stirred.</p>
+</div>
+<span class="text-primary font-bold ml-4">$18</span>
+</div>
+<div class="flex justify-between items-center group cursor-default p-5 -mx-5 hover:bg-white/5 rounded-2xl transition-all duration-300 border border-transparent hover:border-white/10 reveal-on-scroll">
+<div>
+<h3 class="text-slate-100 text-lg font-bold group-hover:text-primary transition-colors">Old Fashioned</h3>
+<p class="text-slate-300 text-base italic leading-relaxed">Rye Whiskey, Sugar Cube, Angostura, Orange Peel.</p>
+</div>
+<span class="text-primary font-bold ml-4">$17</span>
+</div>
+<div class="flex justify-between items-center group cursor-default p-5 -mx-5 hover:bg-white/5 rounded-2xl transition-all duration-300 border border-transparent hover:border-white/10 reveal-on-scroll">
+<div>
+<h3 class="text-slate-100 text-lg font-bold group-hover:text-primary transition-colors">Paper Plane</h3>
+<p class="text-slate-300 text-base italic leading-relaxed">Bourbon, Aperol, Amaro Nonino, Fresh Lemon Juice.</p>
+</div>
+<span class="text-primary font-bold ml-4">$19</span>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<div class="bg-primary/5 rounded-2xl border border-primary/20 p-8 md:p-12 text-center mb-28 reveal-on-scroll">
+<h3 class="text-slate-100 text-4xl font-display mb-4 italic">Private Tastings</h3>
+<p class="text-slate-400 mb-8 max-w-md mx-auto">Discover the history behind our spirits with a personalized tasting experience led by our master mixologists.</p>
+<button class="bg-primary hover:bg-primary/90 text-background-dark px-10 py-3 rounded-lg text-sm font-bold uppercase tracking-widest transition-all">
+                            Enquire Now
+                        </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950/50 border-t border-primary/20 py-12 px-6 lg:px-20">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 text-center md:text-left">
+<div>
+<div class="flex items-center gap-3 text-primary mb-6 justify-center md:justify-start">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-100 text-xl font-display font-bold leading-tight tracking-tight uppercase italic"><a href="index.html" class="text-inherit">Drink</a></h2>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">A sanctuary for the refined palate. We celebrate the intersection of history and innovation in every glass.</p>
+</div>
+<div>
+<h4 class="text-slate-100 font-bold uppercase tracking-widest text-sm mb-6">Location</h4>
+<p class="text-slate-400 text-sm mb-2">124 Speakeasy Way</p>
+<p class="text-slate-400 text-sm">New York, NY 10001</p>
+<div class="mt-4 flex justify-center md:justify-start">
+<span class="material-symbols-outlined text-primary" data-location="New York City">location_on</span>
+</div>
+</div>
+<div>
+<h4 class="text-slate-100 font-bold uppercase tracking-widest text-sm mb-6">Connect</h4>
+<div class="flex gap-4 justify-center md:justify-start">
+<a class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 transition-all" href="#">
+<span class="material-symbols-outlined text-base">person</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 transition-all" href="#">
+<span class="material-symbols-outlined text-base">mail</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 transition-all" href="#">
+<span class="material-symbols-outlined text-base">share</span>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-primary/10 text-center">
+<p class="text-slate-500 text-xs uppercase tracking-tighter">© 2024 Drink Mixology Bar. All Rights Reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+
+<style>
+    .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(2rem);
+        transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+            observer.observe(el);
+        });
+    });
+</script>
+</body>
+</html>

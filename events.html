@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eab308",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#050505",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+        h1, h2, h3, .font-display {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex flex-col w-full min-h-screen overflow-x-hidden">
+<header class="w-full border-b border-primary/20 px-6 lg:px-20 py-4 flex items-center justify-between sticky top-0 bg-background-dark/95 backdrop-blur-md z-50">
+<div class="flex items-center gap-3">
+<div class="text-primary size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-3xl font-display font-bold tracking-tight"><a href="index.html" class="text-inherit">DRINK</a></h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="menu.html">Menu</a>
+<a class="text-sm font-medium text-primary border-b border-primary" href="events.html">Events</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="events.html">Reservations</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Private Dining</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="hidden lg:flex items-center justify-center bg-primary text-background-dark px-6 py-2 rounded-lg font-bold text-sm tracking-wide hover:bg-primary/90 transition-all">
+                    Book a Table
+                </button>
+<div class="size-10 rounded-full border border-primary/30 bg-cover bg-center" data-alt="User profile avatar portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMoMOLKPci_kf_gHZ6DvGDJ20x4ibAxF5BJimAiKzXNeu9STowO1hBHFT_w5lgIO0Pd71wuqGs7lt-Hi6zXCo72ygBkAs_LUsajSub4LEZCEQclGzJlcLReH1QKppfXPVKw8moxpa5-mDzMr5Wdj-KSn5tvvZS0ZDrPCyg8u62YHqculsiyXwBxEdA517DHz9-3ZYrUDIyvWIJLm8QDqRTPV_7ElBWJgBXUX0B56U96B-pb0U148vwUbTtDu2WNhGZnzROp_Qn1ZLI')"></div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-20 py-12">
+<!-- Hero Banner -->
+<section class="relative h-[300px] w-full rounded-xl overflow-hidden mb-16 shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Moody atmosphere of a high-end cocktail bar lounge" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKziDZIumsTV7KwEQ_MXjv95IvsjUh5nZzmnG2Za9032Ria8hq7alZ9fh8ULKbdmGgtBG8r6liJgJI0a8C46qeE3NP9GutmS_vGc76GtY0xhZnZWYxzAddg3TFWUBJSBYdJ4hHNtFI2gYdXQWRGaDz8z2PGjEHN90Ct9BEOHjqN8ZMUVw8s0AfS_xF3gJKWkClmJbsBvgWoZn1bv8cDkZjvTLrwJlfcrpBZwpGDo1GThzfycsFZV7qI7TTAEbfI7EQxvuRxkJPCxnB')"></div>
+<div class="absolute bottom-0 left-0 p-10 z-20 reveal-on-scroll">
+<h1 class="text-6xl font-display font-bold text-white mb-2">Events &amp; Reservations</h1>
+<p class="text-slate-300 max-w-xl">Join us for curated evenings of sophisticated sound, expert mixology, and the finest spirits in the city.</p>
+</div>
+</section>
+<!-- Upcoming Events Section -->
+<section class="mb-28">
+<div class="flex items-end justify-between mb-8">
+<div>
+<span class="text-primary font-bold tracking-widest text-xs uppercase">Curated Experiences</span>
+<h2 class="text-4xl font-display font-bold mt-2">Upcoming Events</h2>
+</div>
+<a class="text-primary text-sm font-semibold flex items-center gap-1 hover:underline" href="#">
+                        View All Events <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Event Card 1 -->
+<div class="group cursor-pointer reveal-on-scroll">
+<div class="relative aspect-[16/10] overflow-hidden rounded-xl mb-4">
+<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors duration-300"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Musician playing jazz saxophone in dim light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFjVkrYsqzSZlGn8usme5IRT4yXoifP3jEMeRriDbLNYrJ91Y0enlWia-ZojIUj8M1p24ZbAhl3RZK5QdqgEKy-vhLBzpFAL14fxOhPg8MdUAxxWrEKAzJVfstW5TRmkfk6gTyiNUA80VuVCVU6NNiGuHQSGZQQnMHvXdy4JBCmtnd9joxrLkXE9bYXskzwBs3F0XUiGsHN-6XzhvYq3DjN81Dg0sBkm4Tr4HhLHMnYw3gy-7JW0nAOeBeynOQsmgLYh7IR-wsAyro')"></div>
+<div class="absolute top-4 left-4 bg-background-dark/80 backdrop-blur-md border border-primary/20 px-3 py-1 rounded text-xs font-bold text-primary">FRIDAYS</div>
+</div>
+<h3 class="text-xl font-display font-bold group-hover:text-primary transition-colors">Live Jazz Night</h3>
+<p class="text-primary/80 text-sm font-medium mt-1">Every Friday | 9 PM - Late</p>
+<p class="text-slate-400 text-sm mt-3 leading-relaxed">Experience soulful melodies and improvisational mastery in our moody, candle-lit lounge setting.</p>
+</div>
+<!-- Event Card 2 -->
+<div class="group cursor-pointer reveal-on-scroll">
+<div class="relative aspect-[16/10] overflow-hidden rounded-xl mb-4">
+<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors duration-300"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Mixologist pouring a bright orange cocktail with garnish" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYD1Gq5sXBnKujZKReZvKSE5UQW2hSVe-PJyregWFWL6QDzY9gTJwpCJejo6tfNzhisnkrSUzt_et0VrWpXWn3JRMs89ZOYE3xKG_SbgNnNDLnXgX6XidjocUfUjfws0FD-eL9-zV6d2oGuTFGt3Wyzvjx-3b3WMHXVKmPIj5vyEymvUCJqNYooUibrhEHY2AkJYhiXfDFwRIyiLFJs0GzOJQfEgrX7KD6m3tWBZYGtt_QGukpiAeI79BabnvUq14YJLFX4Cjhs9O1')"></div>
+<div class="absolute top-4 left-4 bg-background-dark/80 backdrop-blur-md border border-primary/20 px-3 py-1 rounded text-xs font-bold text-primary">WEEKENDS</div>
+</div>
+<h3 class="text-xl font-display font-bold group-hover:text-primary transition-colors">Cocktail Masterclass</h3>
+<p class="text-primary/80 text-sm font-medium mt-1">Saturday Afternoons | 2 PM</p>
+<p class="text-slate-400 text-sm mt-3 leading-relaxed">Learn the intricate art of the perfect pour and balance from our award-winning lead mixologists.</p>
+</div>
+<!-- Event Card 3 -->
+<div class="group cursor-pointer reveal-on-scroll">
+<div class="relative aspect-[16/10] overflow-hidden rounded-xl mb-4">
+<div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-colors duration-300"></div>
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Selection of whiskey glasses and dark bottles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBekCMgndqF9gvmOuHKuAagUVfIP53Y2ADJpt_9iOQyEwkUZBPekiSyQeQ8hYlX3EZcN4Zk3pzPWK-8xCjW5bhWNLkktn7hreWc3_nh86TgbOPcrdcLNFOTPat5MP8O9-o-kd_Zjy3QdOLWRndxZiLyrRoZtMBez0TtBXaJERFayYI_cVLCKZrkvBQhEjrokYcaStw_IYwz_lDkjUn5pXXR0D3ON_xu51lYIVZSpFyVaXQw65lutvLM7hLO1FO-Wf7EWBfrBk0VU-iL')"></div>
+<div class="absolute top-4 left-4 bg-background-dark/80 backdrop-blur-md border border-primary/20 px-3 py-1 rounded text-xs font-bold text-primary">MONTHLY</div>
+</div>
+<h3 class="text-xl font-display font-bold group-hover:text-primary transition-colors">Rare Whiskey Tasting</h3>
+<p class="text-primary/80 text-sm font-medium mt-1">Last Thursday | 7 PM</p>
+<p class="text-slate-400 text-sm mt-3 leading-relaxed">A curated journey through rare small-batch distillations and international single malts.</p>
+</div>
+</div>
+</section>
+<!-- Reservation Widget Section -->
+<section class="bg-background-dark border border-primary/20 rounded-2xl overflow-hidden shadow-2xl reveal-on-scroll">
+<div class="grid lg:grid-cols-5 h-full">
+<div class="lg:col-span-2 p-10 lg:p-14 flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-primary/10">
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-2">Reservations</span>
+<h2 class="text-4xl font-display font-bold mb-6">Secure Your Table</h2>
+<p class="text-slate-400 leading-relaxed mb-8 text-sm">
+                            Due to our intimate setting, we highly recommend booking in advance. 
+                            For groups larger than 8, please contact our private dining team.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-slate-300">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<span class="text-sm">Tue – Sun: 5:00 PM - 2:00 AM</span>
+</div>
+<div class="flex items-center gap-4 text-slate-300">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="text-sm">124 Merchant St, Old Quarter</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-3 p-10 lg:p-14 bg-background-dark/40">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-slate-500">Date</label>
+<div class="relative">
+<input class="w-full bg-background-dark border border-primary/30 rounded-lg p-3 text-slate-100 focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all appearance-none" type="date"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none">calendar_month</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-slate-500">Party Size</label>
+<select class="w-full bg-background-dark border border-primary/30 rounded-lg p-3 text-slate-100 focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all appearance-none">
+<option>2 People</option>
+<option>3 People</option>
+<option>4 People</option>
+<option>5 People</option>
+<option>6 People</option>
+<option>7 People</option>
+<option>8 People</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold uppercase tracking-widest text-slate-500">Preferred Time</label>
+<div class="grid grid-cols-3 md:grid-cols-4 gap-3">
+<button class="border border-primary/20 p-2 text-xs rounded hover:bg-primary hover:text-background-dark transition-colors font-bold" type="button">19:00</button>
+<button class="bg-primary text-background-dark p-2 text-xs rounded font-bold" type="button">19:30</button>
+<button class="border border-primary/20 p-2 text-xs rounded hover:bg-primary hover:text-background-dark transition-colors font-bold" type="button">20:00</button>
+<button class="border border-primary/20 p-2 text-xs rounded hover:bg-primary hover:text-background-dark transition-colors font-bold" type="button">20:30</button>
+<button class="border border-primary/20 p-2 text-xs rounded hover:bg-primary hover:text-background-dark transition-colors font-bold" type="button">21:00</button>
+<button class="border border-primary/20 p-2 text-xs rounded hover:bg-primary hover:text-background-dark transition-colors font-bold" type="button">21:30</button>
+<button class="border border-primary/20 p-2 text-xs rounded hover:bg-primary hover:text-background-dark transition-colors font-bold" type="button">22:00</button>
+<button class="border border-primary/20 p-2 text-xs rounded hover:bg-primary hover:text-background-dark transition-colors font-bold" type="button">22:30</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<label class="text-xs font-bold uppercase tracking-widest text-slate-500">Special Requests</label>
+<textarea class="w-full bg-background-dark border border-primary/30 rounded-lg p-3 text-slate-100 focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all resize-none text-sm" placeholder="Anniversaries, allergies, or table preferences..." rows="3"></textarea>
+</div>
+<button class="w-full bg-primary text-background-dark font-bold py-4 rounded-lg tracking-widest uppercase text-sm hover:shadow-[0_0_20px_rgba(249,164,6,0.3)] transition-all" type="submit">
+                                Confirm Reservation
+                            </button>
+<p class="text-center text-[10px] text-slate-500 uppercase tracking-tighter">By clicking confirm, you agree to our booking policy</p>
+</form>
+</div>
+</div>
+</section>
+<!-- Map/Footer Context Section -->
+<section class="mt-20 flex flex-col md:flex-row gap-16 items-center reveal-on-scroll">
+<div class="flex-1 w-full h-[300px] rounded-xl overflow-hidden border border-primary/10 grayscale contrast-125">
+<img class="w-full h-full object-cover" data-alt="Stylized dark map showing bar location" data-location="London" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0HsM863-lfUDjtRASLGEDWmPHu53DFonH7j8YLAXCK9fC3kgFg3EuTp_FKOSfKEzKfYdAG2Nf50ASQ9hoR4sTZaarvaGb7YnA_UiXlfFm3sDGhSSzvMyUiy2BDqWM3Sca_E8m8BNkAl8OqJbp8NH5x-_VVROu9NxV2ZJTLb-cfbecXClEu_N9YGOZzYmPfPP7Mmm-H0l9WT7VN-zFPZYsbjIGVeD0fe3w16iF3lpxv1vl4VP5hwnqN75rUx1NNmfo6Q-ySKRtsH82"/>
+</div>
+<div class="flex-1 space-y-6">
+<h3 class="text-3xl font-display font-bold">Find Us</h3>
+<p class="text-slate-400 text-sm">Nestled in the heart of the historic district, 'Drink' offers an escape from the ordinary. Look for the golden diamond above the velvet doors.</p>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-primary text-xs font-bold uppercase mb-1">Inquiries</p>
+<p class="text-slate-200 text-sm">hello@drink.bar</p>
+</div>
+<div>
+<p class="text-primary text-xs font-bold uppercase mb-1">Phone</p>
+<p class="text-slate-200 text-sm">+1 (555) 012-3456</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="mt-20 border-t border-primary/10 py-10 px-6 lg:px-20 bg-background-dark/50">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3 opacity-60">
+<div class="text-primary size-5">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-lg font-display font-bold tracking-tight">DRINK</span>
+</div>
+<div class="flex gap-8 text-xs font-bold text-slate-500 uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+</div>
+<p class="text-slate-500 text-[10px] uppercase tracking-widest">© 2024 DRINK EXPERIENCES INC.</p>
+</div>
+</footer>
+</div>
+
+<style>
+    .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(2rem);
+        transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+            observer.observe(el);
+        });
+    });
+</script>
+</body>
+</html>

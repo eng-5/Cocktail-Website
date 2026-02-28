@@ -1,0 +1,360 @@
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#eab308",
+            "background-light": "#f8f7f5",
+            "background-dark": "#050505",
+            "surface-dark": "#1e1a16",
+            "border-gold": "#4a3c21",
+          },
+          fontFamily: {
+            "display": ["Noto Serif", "serif"],
+            "sans": ["Noto Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          keyframes: {
+            shimmer: {
+              '100%': { left: '125%' },
+            }
+          },
+          animation: {
+            shimmer: 'shimmer 2.5s infinite linear',
+          }
+        },
+      },
+    }
+  </script>
+<style type="text/tailwindcss">
+    body {
+      font-family: "Noto Sans", sans-serif;
+    }
+    h1, h2, h3, .font-display {
+      font-family: "Noto Serif", serif;
+    }
+    .shimmer-btn {
+      position: relative;
+      overflow: hidden;
+    }
+    .shimmer-btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+      );
+      transform: skewX(-25deg);
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer {
+      0% { left: -75%; }
+      100% { left: 125%; }
+    }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="fixed top-0 z-50 w-full border-b border-white/10 bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">liquor</span>
+</div>
+<h2 class="text-xl font-bold tracking-[0.2em] uppercase font-display"><a href="index.html" class="text-inherit">Drink</a></h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-xs uppercase tracking-widest font-medium hover:text-primary transition-colors" href="menu.html">Menu</a>
+<a class="text-xs uppercase tracking-widest font-medium hover:text-primary transition-colors" href="#">The Space</a>
+<a class="text-xs uppercase tracking-widest font-medium hover:text-primary transition-colors" href="#">Private Cellar</a>
+<a class="text-xs uppercase tracking-widest font-medium hover:text-primary transition-colors" href="#">Journal</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="hidden sm:flex items-center justify-center rounded-sm h-10 px-6 border border-primary text-primary text-xs font-bold tracking-[0.15em] uppercase hover:bg-primary hover:text-background-dark transition-all">
+            Reservations
+          </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-4xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<section class="relative w-full h-screen">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Dramatic high-quality shot of a bartender expertly crafting a cocktail with motion blur on the pour and warm amber lighting" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(22, 20, 18, 1)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCd42kJPIadkDqI7qaPDkcCN2-__eygNfytCwIJ3yWFaZMgFBdtqLU_D7jsgdUX740o60aWHS96t24uqdO9w00ZVT4cA3jBR23sA-rxcsamIeY2D6eZ5P_MBo401Uqt_5FTyKkoLsxKCCPwywvvLOnixcoBK8nfZZnu8Cz34-nf1x3TxFK-R0w-0FQgDwjS2l3ZCYBcuxcNlpfi3eBKzhg39GQyhTQ1gzJBmLmWlTxSeiy9a7omBgTHRgZRijgCpKPvO2tb_Orls1Cx");'></div>
+<div class="relative z-10 h-full flex items-center justify-center px-6 text-center">
+<div class="max-w-[900px] pt-20 reveal-on-scroll">
+<span class="text-primary uppercase tracking-[0.5em] text-xs font-bold mb-8 block">The Art of the Pour</span>
+<h1 class="text-white text-6xl md:text-8xl font-bold leading-[1.1] mb-8 font-display italic">
+            Precision in Every <br/>Single Drop
+          </h1>
+<p class="text-slate-200 text-lg md:text-xl font-light leading-relaxed mb-16 max-w-2xl mx-auto font-display italic">
+            Where liquid chemistry meets timeless elegance. Immerse yourself in a curated atmosphere of craft, glass, and gold.
+          </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="shimmer-btn h-16 px-12 rounded-sm bg-primary text-background-dark font-bold text-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-[0_0_20px_rgba(249,164,6,0.3)]">
+              Reserve Your Seat
+            </button>
+<button class="h-16 px-12 rounded-sm border border-white/30 text-white font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-colors backdrop-blur-sm">
+              View Collection
+            </button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/40 flex flex-col items-center gap-2">
+<span class="text-[10px] uppercase tracking-[0.3em]">Discover</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</section>
+<section class="py-40 md:py-48 px-6 lg:px-20 bg-background-dark">
+<div class="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-20 items-center">
+<div class="relative aspect-[4/5] rounded-sm overflow-hidden border border-border-gold shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Close up of a premium glass of bourbon with a single ice sphere" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlmC9lDY53Nq_0ytDybGcOBRZwColul7pH4edEp8pzhMzS0AXWecMHuvyKS94AdHb9ERPAjoKXfjq6QrF4aLvUnR75nPo7cSFZgxfGwibPAHHSO9IPz-2s3QRscAdfmW0mmGslvfQ4ttEiwDa5O3RtgtmXmS7B9ljN8xbmjL0vRYdlCIJkcBO2ZAvLYdNj-rJxrHvw109tgi2gZjQ5KegANE6DMhiL5VQf5CnLaqeEmSMYypDf0_H6R_lRrSd2IPcsmtSFBfOBYqaU");'></div>
+<div class="absolute inset-0 border-[20px] border-background-dark/20 pointer-events-none"></div>
+</div>
+<div class="space-y-10 reveal-on-scroll">
+<div class="space-y-4">
+<span class="text-primary uppercase tracking-widest text-xs font-bold">The Philosophy</span>
+<h2 class="text-white text-6xl font-bold font-display italic leading-tight">Crafting the <br/>Unexpected</h2>
+</div>
+<p class="text-slate-300 text-xl leading-relaxed font-display italic italic">
+            "A cocktail is more than a drink; it is a meticulously choreographed performance between chemistry and emotion."
+          </p>
+<p class="text-slate-400 text-base leading-relaxed max-w-lg">
+            Our master mixologists blend rare spirits with house-made botanicals, infused oils, and artisanal syrups to create liquid art. Every detail, from the clarity of our hand-carved ice to the essential oils misted over the glass, is intentional.
+          </p>
+<div class="pt-6 grid grid-cols-3 gap-8">
+<div class="flex flex-col">
+<span class="text-4xl font-display text-primary italic">120+</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 mt-2">Spirits</span>
+</div>
+<div class="flex flex-col">
+<span class="text-4xl font-display text-primary italic">15</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 mt-2">Signatures</span>
+</div>
+<div class="flex flex-col">
+<span class="text-4xl font-display text-primary italic">IV</span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500 mt-2">Awards</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 md:py-48 px-6 lg:px-20 bg-surface-dark/30">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-28 gap-8">
+<div class="max-w-xl">
+<span class="text-primary uppercase tracking-widest text-xs font-bold block mb-4">The Current Volume</span>
+<h2 class="text-white text-6xl font-bold font-display italic">Seasonal Creations</h2>
+</div>
+<a class="text-primary text-xs uppercase tracking-widest border-b border-primary/30 pb-2 font-bold hover:text-white hover:border-white transition-all" href="menu.html">Explore Full Menu</a>
+</div>
+<div class="grid md:grid-cols-3 gap-16">
+<div class="group cursor-pointer reveal-on-scroll">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm mb-8">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="Elegant cocktail glass with a dried orange slice garnish" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-2J9_Wx5emhcnxTyF_8rxfDly-_B1tGY77OVidD54wWJ2B0xK43EsICV_36O0p1-f8UI6XuqtT7emLkBAN9UvDdc9uxrWzPKpkUZwVj9321XPgVqtBFy4v2uqSks5EjAE0Zp0lfEM7CMsX5yxvF79wGvQ8afYYnRxZu-yLCG3I7JEszFWGFh_9NtFDFDm7NpMgJKx2z3z5rNbr8nyhko59QhRu54m_u6irUtb5qHFqnv9nvshM6lEp7rG3hQ4aTxKe8gi8XiRL0Ka");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<h3 class="text-3xl font-display text-white italic group-hover:text-primary transition-colors">The Smoked Ember</h3>
+<span class="text-primary font-display italic">$24</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed font-light">
+                Highland scotch, peat-smoked maple, and aromatic bitters. Served under a glass cloche of hickory smoke.
+              </p>
+</div>
+</div>
+<div class="group cursor-pointer reveal-on-scroll">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm mb-8">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="Vibrant herbal cocktail with fresh mint and botanical elements" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0WrZYmDTom8shzGT0u9G505Xsfzo6CscnlQOxaPrAWLRSjrpeBwEY4LWxCvzGZYK1PQ8dTjFKyiy8OK5FO98LFRy7rFT2VNKIpVm_IS1QMrtiwZOWSPkO-PbJCHesawjLBGscyQxMhdmUvmZTVRjGtiDOd5kEBblC6wGxTdcerl-ou4H00blvVJNIeiIp6T7b9D6f2yodgHGzyMk_S3tq4ZUz8PnC1JX7RASr-B02ACmlMhIcCUkwZCCcgHybFqH_jK_DPb9drXHH");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<h3 class="text-3xl font-display text-white italic group-hover:text-primary transition-colors">Botanical Noir</h3>
+<span class="text-primary font-display italic">$19</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed font-light">
+                Artisanal gin, charcoal-filtered jasmine tea, and yuzu. Garnished with an edible orchid.
+              </p>
+</div>
+</div>
+<div class="group cursor-pointer reveal-on-scroll">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm mb-8">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="Classic cocktail in a crystal coupe glass with a cherry" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZk_lHrywZ87Io8p7HAGu-up-Bf78S3Pic7PB8iKKJ57h2gm4TB6dwevuErgeLQFO211IjfoccFkKlSFFi9HdG2eUE3oghDay0nL64UNUio6ETgnpSdwk_DheixKDNvpo2k1tglmLJEy9o2PjK7ooRZURxuqRIOKhVLBlC34UGJx--3UcTxYfzBVjEd848Hk8fd__vBalatFs2KYiGPZEmzA9b3jrDWCBnA0CO0JzTRV6_jqyVL9OkFWW8PHfzSsJ6D8HfPneVIOib");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent opacity-80 group-hover:opacity-40 transition-opacity"></div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<h3 class="text-3xl font-display text-white italic group-hover:text-primary transition-colors">Velvet Manhattan</h3>
+<span class="text-primary font-display italic">$22</span>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed font-light">
+                Premium rye whiskey, house-aged vermouth blend, and a dark luxardo cherry reduction.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-40 md:py-48 px-6 lg:px-20 bg-background-dark border-t border-border-gold/20">
+<div class="max-w-[1200px] mx-auto">
+<div class="text-center mb-28">
+<span class="text-primary uppercase tracking-[0.4em] text-[10px] font-bold block mb-4">The Guest Journal</span>
+<h2 class="text-white text-6xl font-bold font-display italic">Guest Experiences</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-16">
+<div class="flex flex-col items-center text-center space-y-6 px-4 reveal-on-scroll">
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+</div>
+<blockquote class="text-slate-300 text-lg font-display italic leading-relaxed">
+        "An absolute masterpiece of a bar. The Smoked Ember isn't just a drink; it's a multi-sensory event. The atmosphere is unrivaled in the city."
+      </blockquote>
+<cite class="not-italic">
+<span class="text-white text-xs uppercase tracking-widest font-bold">Alexander Thorne</span>
+</cite>
+</div>
+<div class="flex flex-col items-center text-center space-y-6 px-4 reveal-on-scroll">
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+</div>
+<blockquote class="text-slate-300 text-lg font-display italic leading-relaxed">
+        "Sophistication at its finest. From the moment you enter, you know you're in for something special. The mixologists are true artists."
+      </blockquote>
+<cite class="not-italic">
+<span class="text-white text-xs uppercase tracking-widest font-bold">Elena Vance</span>
+</cite>
+</div>
+<div class="flex flex-col items-center text-center space-y-6 px-4 reveal-on-scroll">
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+<span class="material-symbols-outlined text-lg fill-1">star</span>
+</div>
+<blockquote class="text-slate-300 text-lg font-display italic leading-relaxed">
+        "The attention to detail is staggering. The lighting, the music, and the drinks create a perfect escape from the bustling streets outside."
+      </blockquote>
+<cite class="not-italic">
+<span class="text-white text-xs uppercase tracking-widest font-bold">Julian Rossi</span>
+</cite>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-background-dark border-t border-border-gold/30 pt-32 pb-12 px-6 lg:px-20">
+<div class="max-w-[1200px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-8">
+<div class="text-primary">
+<span class="material-symbols-outlined text-4xl">liquor</span>
+</div>
+<h2 class="text-xl font-bold tracking-[0.2em] uppercase font-display"><a href="index.html" class="text-inherit">Drink</a></h2>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed max-w-xs">
+              Crafting premium liquid experiences since 2012. Join us for a journey of spirits and stories.
+            </p>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-[10px] mb-8">Find Us</h4>
+<p class="text-slate-400 text-xs mb-2">123 Mixology Avenue</p>
+<p class="text-slate-400 text-xs mb-6">Arts District, NY 10001</p>
+<a class="text-primary text-xs uppercase tracking-widest hover:text-white transition-colors border-b border-primary/20 pb-1" href="#">Directions</a>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-[10px] mb-8">Service</h4>
+<div class="space-y-3">
+<div class="flex justify-between text-[11px] uppercase tracking-tighter">
+<span class="text-slate-500">Tue - Thu</span>
+<span class="text-slate-400">17:00 - 00:00</span>
+</div>
+<div class="flex justify-between text-[11px] uppercase tracking-tighter">
+<span class="text-slate-500">Fri - Sat</span>
+<span class="text-slate-400">17:00 - 02:00</span>
+</div>
+<div class="flex justify-between text-[11px] uppercase tracking-tighter">
+<span class="text-slate-500">Sun - Mon</span>
+<span class="text-slate-400 italic">By Private Invite</span>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold uppercase tracking-widest text-[10px] mb-8">Connect</h4>
+<div class="flex gap-4">
+<a class="size-10 rounded-sm border border-border-gold/50 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">share_reviews</span>
+</a>
+<a class="size-10 rounded-sm border border-border-gold/50 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">camera</span>
+</a>
+<a class="size-10 rounded-sm border border-border-gold/50 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-600 text-[10px] uppercase tracking-widest">© 2024 Drink Atelier. All spirits reserved.</p>
+<div class="flex gap-10">
+<a class="text-slate-600 text-[10px] uppercase tracking-widest hover:text-slate-400 transition-colors" href="#">Privacy</a>
+<a class="text-slate-600 text-[10px] uppercase tracking-widest hover:text-slate-400 transition-colors" href="#">Terms</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+
+<style>
+    .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(2rem);
+        transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+            observer.observe(el);
+        });
+    });
+</script>
+</body>
+</html>
